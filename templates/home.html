@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Insider{% endblock %}
+
+{% block content %}
+    <div class="row justify-content-md-center">
+        <div class="col-lg-2 col-side my-font">
+            <div class="profile-pic">
+                <img src="{% static "icons/profile-pic.png" %}" width="95" height="95">
+            </div>
+            <p class="username"> User97 </p>
+            <p class="country"> Bucharest </p>
+            <p class="action"> Bucharest </p>
+            <p class="action"> Volunteer acts</p>
+            <p class="action"> Donations </p>
+            <p class="ranking"> Causes </p>
+
+            <button> Start a campaign</button>
+        </div>
+
+        <div class="col-lg-8 col-main">
+            <div class="row category justify-content-md-center my-font ">
+                volunteer
+            </div>
+            <ul class="nav category justify-content-center">
+                <a class="icon" href="{% url 'app:home' %}">
+                    <img src="{% static "icons/volunteer-1.png" %}">
+                </a>
+                <a class="icon" href="{% url 'app:home' %}">
+                    <img src="{% static "icons/volunteer-2.png" %}">
+                </a>
+                <a class="icon" href="{% url 'app:home' %}">
+                    <img src="{% static "icons/volunteer-3.png" %}">
+                </a>
+
+                <a class="icon" href="{% url 'app:home' %}">
+                    <img src="{% static "icons/volunteer.png" %}">
+                </a>
+
+               <a class="icon" href="{% url 'app:home' %}">
+                    <img src="{% static "icons/volunteer-8.png" %}">
+                </a>
+                <a class="icon" href="{% url 'app:home' %}">
+                    <img src="{% static "icons/volunteer-9.png" %}">
+                </a>
+                <a class="icon" href="{% url 'app:home' %}">
+                    <img src="{% static "icons/volunteer-10.png" %}">
+                </a>
+            </ul>
+
+            <div class="row category justify-content-md-center my-font ">
+                donate
+            </div>
+            <ul class="nav category justify-content-center">
+                <a class="icon" href="{% url 'app:home' %}">
+                    <img src="{% static "icons/donate-1.png" %}">
+                </a>
+                <a class="icon" href="{% url 'app:home' %}">
+                    <img src="{% static "icons/donate-2.png" %}">
+                </a>
+                <a class="icon" href="{% url 'app:home' %}">
+                    <img src="{% static "icons/donate-3.png" %}">
+                </a>
+
+                <a class="icon" href="{% url 'app:home' %}">
+                    <img src="{% static "icons/donate.png" %}">
+                </a>
+
+                <a class="icon" href="{% url 'app:home' %}">
+                    <img src="{% static "icons/donate-5.png" %}">
+                </a>
+                <a class="icon" href="{% url 'app:home' %}">
+                    <img src="{% static "icons/donate-6.png" %}">
+                </a>
+                <a class="icon" href="{% url 'app:home' %}">
+                    <img src="{% static "icons/donate-7.png" %}">
+                </a>
+            </ul>
+
+            <div class="row category justify-content-md-center my-font ">
+                emergencies
+            </div>
+            <ul class="nav category justify-content-center">
+                <a class="icon" href="{% url 'app:home' %}">
+                    <img src="{% static "icons/emergencies-1.png" %}">
+                </a>
+                <a class="icon" href="{% url 'app:home' %}">
+                    <img src="{% static "icons/emergencies-2.png" %}">
+                </a>
+                <a class="icon" href="{% url 'app:home' %}">
+                    <img src="{% static "icons/emergencies-3.png" %}">
+                </a>
+
+                <a class="icon" href="{% url 'app:home' %}">
+                    <img src="{% static "icons/emergencies.png" %}">
+                </a>
+
+                <a class="icon" href="{% url 'app:home' %}">
+                    <img src="{% static "icons/emergencies-5.png" %}">
+                </a>
+                <a class="icon" href="{% url 'app:home' %}">
+                    <img src="{% static "icons/emergencies-6.png" %}">
+                </a>
+                <a class="icon" href="{% url 'app:home' %}">
+                    <img src="{% static "icons/emergencies-7.png" %}">
+                </a>
+            </ul>
+        </div>
+
+        <div class="col-lg-2 col-side">
+        </div>
+    </div>
+
+{% endblock %}

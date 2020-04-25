@@ -1,8 +1,98 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %}Insider{% endblock %}
 
 {% block content %}
-    <h> Welcome to insider! </h>
-    <h> Let's help people that need it! </h>
+    <div class="row justify-content-md-center">
+        <div class="col-lg-2 col-side">
+            <div class="profile-pic">
+                <img src="{% static "icons/eu-flag.png" %}" width="95" height="95">
+            </div>
+            <p class="action"> Users </p>
+            <p class="action"> Volunteers</p>
+            <p class="action"> Donations </p>
+            <p class="ranking"> Causes </p>
+        </div>
+
+        <div class="col-lg-8 col-main">
+
+            <p class="index-category-text">
+                <b> Our drive</b>
+                <br> <br>
+                We noticed the lack of communication between national institutions and the rest of the people.
+                Youngsters
+                and adults
+                together may have a bold ambition to help with everything what is possible, but they do not know where
+                or
+                how to do it.
+                In the same way, institutions, at the moment, can reach a limited number of organisations prepared into
+                the
+                specific areas
+                of trouble they encounter.
+
+                <br><br><br>
+
+                <b>What if everybody can actually help out?</b>
+                <br><br>
+                INSIDER focuses on the potential workflow that one can make to help the institutions in his area,
+                becoming a common effort in
+                fighting the virus and fulfilling the minuses one system can have at the moment of speaking. Start-ups,
+                ONGs, companies,
+                all together united can exchange their assets directly in order to.
+            </p>
+
+            <ul class="nav justify-content-center">
+                <div class="nav-item">
+                    <div class="row index-category justify-content-md-center my-font">
+                        <a class="icon" href="{% url 'app:home' %}">
+                            <img src="{% static "icons/volunteer.png" %}">
+                        </a>
+                    </div>
+
+                    <div class="row index-category justify-content-md-center my-font ">
+                        volunteer
+                    </div>
+                </div>
+
+                <div class="nav-item">
+                    <div class="row index-category justify-content-md-center my-font">
+                        <a class="icon" href="{% url 'app:home' %}">
+                            <img src="{% static "icons/donate.png" %}">
+                        </a>
+                    </div>
+
+                    <div class="row index-category justify-content-md-center my-font ">
+                        donate
+                    </div>
+                </div>
+
+                <div class="nav-item">
+                    <div class="row index-category justify-content-md-center my-font">
+                        <a class="icon" href="{% url 'app:home' %}">
+                            <img src="{% static "icons/emergencies.png" %}">
+                        </a>
+                    </div>
+
+                    <div class="row index-category justify-content-md-center my-font ">
+                        emergencies
+                    </div>
+                </div>
+
+                <div class="nav-item">
+                    <div class="row index-category justify-content-md-center my-font">
+                        <a class="icon" href="{% url 'app:home' %}">
+                            <img src="{% static "icons/campaigns.png" %}">
+                        </a>
+                    </div>
+
+                    <div class="row index-category justify-content-md-center my-font ">
+                        campaigns
+                    </div>
+                </div>
+            </ul>
+        </div>
+
+        <div class="col-lg-2 col-side">
+        </div>
+    </div>
 {% endblock %}

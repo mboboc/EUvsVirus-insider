@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,16 +19,21 @@
         }
 
         {# Navigation Bar Styling #}
-        .nav {
+        .navigation-bar {
             background-color: #f7e1cf;
             color: #686868 !important;
-            font-size: 150%;
-            padding-top: 60px;
+            padding-top: 52px;
+            padding-bottom: 20px;
+            font-size: 170%;
         }
-
         .nav-item {
             color: inherit;
             font-size: inherit;
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: column;
+            padding-right: 40px;
+            padding-left: 40px;
         }
 
         .nav-link {
@@ -34,17 +41,68 @@
             font-size: inherit;
         }
 
+        .logo {
+            padding-right: 40px;
+        }
+
         {# End of nav bar #}
-    .col-main {
-        background-color: #f7f0eb;
-        padding-bottom: 1000px;
-    }
+        .col-main {
+            background-color: #f7f0eb;
+            padding-bottom: 200px;
+        }
+
+        .col-side {
+            color: #686868 !important;
+            text-align: center;
+        }
+
+        .my-font {
+            font-family: Dialog, sans-serif;
+        }
+
+        .icon {
+            padding-right: 18px;
+            padding-left: 18px;
+        }
+
+        {# Home categories rows customisation #}
+        .category {
+            padding-top: 20px;
+            color: #686868 !important;
+            font-size: 50px;
+        }
+
+        {# Index categories customisation #}
+
+        {# Category icons #}
+        .index-category {
+            color: #686868 !important;
+            padding-top: 20px;
+            padding-right: 10px;
+            padding-left: 30px;
+            font-size: 30px;
+        }
+        {# Index Text #}
+        .index-category-text {
+            color: #686868 !important;
+            padding-top: 20px;
+            padding-right: 50px;
+            padding-left: 50px;
+            font-size: 20px;
+            text-align: justify;
+        }
+
+        p.index-category-text {
+            padding-top: 60px;
+        }
     </style>
 </head>
 
 <body>
-
-<ul class="nav justify-content-center">
+<ul class="nav navigation-bar justify-content-center my-font">
+    <a href="{% url 'app:home' %}">
+        <img src="{% static "logo/logo.png" %}">
+    </a>
     <li class="nav-item">
         <a class="nav-link" href="#">About Us</a>
     </li>
@@ -59,20 +117,8 @@
     </li>
 </ul>
 
-
-<div class="row justify-content-md-center">
-    <div class="col-lg-2 col-side">
-        <p> </p>
-    </div>
-
-    <div class="col-lg-8 col-main">
-        <p> </p>
-    </div>
-
-    <div class="col-lg-2 col-side">
-        <p>{% block title %}Insider{% endblock %} </p>
-    </div>
-</div>
+{% block content %}
+{% endblock %}
 
 </body>
 
