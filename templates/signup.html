@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Insider{% endblock %}
+
+{% block content %}
+    <div class="row login-container justify-content-md-center">
+        <div class="col-lg-3">
+        </div>
+
+        <div class="col-lg-6 text-lg-center">
+            <div class="card-body pt-3 pb-5 ">
+                <form method="post" action="{% url 'app:signup' %}">
+                    {% csrf_token %}
+
+                    <div class="form-label-group col-sm-20 pb-2">
+                        <input type="text" name="username" class="form-control" placeholder="Username" required
+                               autofocus>
+                    </div>
+
+                    <div class="form-label-group col-sm-20 pb-4">
+                        <input name="password" type="password" class="form-control" placeholder="Password"
+                               required
+                               autofocus>
+                    </div>
+
+                    <div class="form-control-file">
+                        <button type="submit" class="btn btn-success btn-lg col-md-5">
+                            Login
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="col-lg-3">
+        </div>
+    </div>
+{% endblock %}
